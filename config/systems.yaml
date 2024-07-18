@@ -4,5 +4,5 @@ kind: System
 metadata:
   name: PIC-System
 spec:
-  owner: guests
+  owner: PIC
 ---
