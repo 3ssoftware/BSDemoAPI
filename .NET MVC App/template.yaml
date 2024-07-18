@@ -10,7 +10,7 @@ metadata:
     - .net
 spec:
   owner: backstage@3segypt.com
-  type: web-app
+  type: website
   parameters:
     - title: Provide some simple information
       required:
