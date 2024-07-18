@@ -1,7 +1,7 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: core-api-template
+  name: netcore-api-template
   title: .NET Core API Template
   description: Create a website powered with .Net Core
   tags:
