@@ -9,6 +9,8 @@ metadata:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: website
+  type: openapi
   lifecycle: experimental
   owner: ${{values.owner | dump}}
+  definition:
+    $openapi: https://api.apis.guru/v2/openapi.yaml
