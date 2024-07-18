@@ -3,12 +3,12 @@ kind: Template
 metadata:
   name: core-api-template
   title: Core API Template
-  description: Create a website powered with Next.js
+  description: Create a website powered with .Net Core
   tags:
     - recommended
     - react
 spec:
-  owner: web@example.com
+  owner: backstage@3segypt.com
   type: website
   parameters:
     - title: Provide some simple information
