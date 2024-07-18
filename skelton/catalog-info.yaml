@@ -9,8 +9,16 @@ metadata:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: openapi
+  type: grpc
   lifecycle: experimental
   owner: ${{values.owner | dump}}
-  definition:
-    $openapi: https://api.apis.guru/v2/openapi.yaml
+  definition: |
+    syntax = "proto3";
+
+    service Exampler {
+      rpc Example (ExampleMessage) returns (ExampleMessage) {};
+    }
+
+    message ExampleMessage {
+      string example = 1;
+    };
