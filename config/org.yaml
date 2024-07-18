@@ -1,0 +1,44 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: PIC
+spec:
+  type: team
+  children: []
+# users.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: seifelwarwary
+  annotations:
+    github.com/user-login: seifelwarwary
+    gitlab.3segypt.com/user-login: seif.ahmed
+    devops.3segypt.com/user-login: seif.ahmed
+spec:
+  profile:
+    displayName: Seif Elwarwary
+    email: seifelwarwary@hotmail.com
+  memberOf:
+    - PIC
+
+--- 
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: haniabdelwahed3s
+  annotations:
+    github.com/user-login: haniabdelwahed3s
+spec:
+  profile:
+    displayName: Hani Abdelwahed
+    email: hani.abdelwahed@3segypt.com
+    
+  memberOf:
+    - PIC
+
+
+--- 
