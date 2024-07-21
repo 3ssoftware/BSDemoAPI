@@ -1,16 +1,15 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: netcore-mvc-template
-  title: .NET Core MVC Template
-  description: Create a website powered with .Net Core
+  name: mvc-app-template
+  title: MVC Application Template
+  description: Create a MVC website
   tags:
     - recommended
-    - mvc
-    - .net
+    - react
 spec:
   owner: backstage@3segypt.com
-  type: website
+  type: service
   parameters:
     - title: Provide some simple information
       required:
@@ -34,7 +33,6 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-              
     - title: Choose a location
       required:
         - repoUrl
@@ -46,7 +44,6 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
-              - gitlab.3segypt.com
   steps:
     - id: template
       name: Fetch Skeleton + Template
@@ -65,7 +62,7 @@ spec:
       name: Publish
       action: publish:github
       input:
-        allowedHosts: ["github.com", "gitlab.3segypt.com"]
+        allowedHosts: ["github.com"]
         description: This is ${{ parameters.component_id }}
         repoUrl: ${{ parameters.repoUrl }}
 
